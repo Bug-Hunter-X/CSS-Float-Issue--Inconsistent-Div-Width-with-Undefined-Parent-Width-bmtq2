@@ -1,0 +1,14 @@
+The solution uses flexbox to achieve the desired layout:
+
+```css
+div {
+  width: 50%;
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+.parent {
+  display: flex;
+}
+```
+
+This code uses `display: flex` on the parent container which solves the issue without relying on `float` and explicitly setting the parent's width.  Each div will automatically occupy 50% of the parent's available width.
