@@ -1,0 +1,12 @@
+The following CSS code results in unexpected behavior in certain browsers:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+This code intends to make two divs sit side by side, each occupying 50% of the parent container's width. However, if the parent container does not have a defined width, the divs might not behave as expected due to the default behavior of `float`.
+
+The issue arises because the floating elements will only take up the space of their content. If the content is less than 50% of the available width, the parent container will collapse to the minimum size necessary to contain the floats.  This means the divs will not stretch to fill the parent.
